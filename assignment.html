@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="assignment.html" class="link ">HOME</a></li>
+            <li><a href="htmlfile.html" class="link ">HTML</a></li>
+            <li><a href="cssfile.html" class="link">CSS</a></li>
+            <li><a href="jsfile.html" class="link">JAVASCRIPT</a></li>
+        </ul>
+    </nav>
+    <section class="slides">
+        <img class="mySlides" src="html_bg.jpg">
+        <img class="mySlides" src="css_bg.jpg">
+        <img class="mySlides" src="js_bg.png">
+    </section>
+
+    <section style="max-width:600px">
+        <h2>Windows Programming Assignment</h2>
+        <p><i>Guided By : Professor Anirban Choudhary</i></p>
+        <p>While HTML is a powerful language, it isn’t enough to build a professional and fully responsive website. We
+            can only use it to add text elements and create the structure of the content.
+
+            However, HTML works extremely well with two other frontend languages: CSS (Cascading Style Sheets), and
+            JavaScript. Together, they can achieve rich user experience and implement advanced functions.</p>
+    </section>
+    <section class="desc" style="text-align: center;">
+        <article class="mdesc">
+            <img class="desc-images" src="css_bg.jpg">
+            <p class="pdesc">Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation
+                of a document written in a markup language such as HTML.[1] CSS is a cornerstone technology of the World
+                Wide Web, alongside HTML and JavaScript.</p>
+        </article>
+        <article class="mdesc">
+            <img class="desc-images" src="html_bg.jpg">
+            <p class="pdesc">Hypertext Markup Language (HTML) is the standard markup language for documents designed to
+                be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS)
+                and scripting languages such as JavaScript.</p>
+        </article>
+        <article class="mdesc">
+            <img class="desc-images" src="js_bg.png">
+            <p class="pdesc">JavaScript, often abbreviated as JS, is a programming language that conforms to the
+                ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It
+                has curly-bracket syntax, dynamic typing, etc.
+            </p>
+        </article>
+
+    </section>
+</body>
+<script>
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {
+            myIndex = 1
+        }
+
+        x[myIndex - 1].style.display = "block";
+        setTimeout(carousel, 3000);
+    }
+</script>
+<footer>
+    <a href="#"><i class="fa fa-facebook-official"></i></a>
+    <a href="#"><i class="fa fa-pinterest-p"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-flickr"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+</footer>
+
+</html>
